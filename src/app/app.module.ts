@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ResidencesComponent } from './Residences/residences/residences.component';
 import { ResidenceTESTComponent } from './residences/residence-test/residence-test.component';
+import { ResidenceDetailsComponent } from './residences/residence-details/residence-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ResidenceTESTComponent } from './residences/residence-test/residence-te
     HomeComponent,
     FooterComponent,
     ResidencesComponent,
-    ResidenceTESTComponent
+    ResidenceTESTComponent,
+    ResidenceDetailsComponent
   ],
   imports: [
     BrowserModule,
