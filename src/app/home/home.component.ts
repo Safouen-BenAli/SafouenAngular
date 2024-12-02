@@ -6,11 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-VAR1="Bonjour 4SE1"
-MyList=[ "4SE1","4SE2","4SE3" ]
-VAR2="https://miro.medium.com/v2/resize:fit:720/format:webp/1*bMgQ8MhbnQexpqHgIgBJPA.png"
-VAR3="Safouen"
-function1() {
-  alert('HI')
+  residences = [
+    { id: 1, name: 'Résidence A' },
+    { id: 2, name: 'Résidence B' },
+    { id: 3, name: 'Résidence C' },
+  ];
 }
-}
+

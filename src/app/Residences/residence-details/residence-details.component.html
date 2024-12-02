@@ -1,1 +1,5 @@
 <p>residence-details works!</p>
+<button (click)="nextResidence()">Next</button>
+<button [routerLink]="['/add-residence']">Add Residence</button>
+<button [routerLink]="['/add-residence', id]">Update Residence</button>
+<p>Vous consultez la résidence avec l'ID : {{ id }}</p>

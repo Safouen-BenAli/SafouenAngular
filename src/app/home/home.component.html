@@ -1,14 +1,24 @@
-<div> Interpolation : {{VAR1}}</div>
-<br>
-<div>Property Binding : <br><img height="150px;" [src]="VAR2"></div>
-<br>
-<div>Event Binding : <button (click)="function1()">Click me</button></div>  
-<div> Twoway DataBinding: <input type="text" [(ngModel)]="VAR3"></div>
+<!-- <div>Interpolation : {{VAR1}}  </div>
+<div>Propriety Binding:<img style="height: 100px;"   [src]="VAR2" alt="angularPic"></div>
+<div>Event Binding: <button (click)="Fun1()">Click me</button></div>
+<div> Twoway DataBinding: <input type="text" [(ngModel)]= "VAR3"> </div>
 <div>VAR3 : {{VAR3}}  </div>
-<div *ngIf="VAR1 else template ">
-<h4>bonjour</h4>
+
+
+<div *ngIf="VAR1 else id ">
+<h6>bonjourrrr</h6>
 </div>
-<ng-template #template> Bonsoir </ng-template >
+<ng-template #id >  Bonsoirrrrr
+</ng-template>
+
+
 <ul *ngFor="let item of MyList , let i=index">
-    <li>{{i}}-- {{item}}</li>
+  <li> {{i}} *{{item}}</li>
+
 </ul>
+ -->
+ <div *ngFor="let residence of residences">
+  <h3>{{ residence.name }}</h3>
+  <button [routerLink]="'/residences/' + residence.id">Voir Détails</button>
+</div>
+
