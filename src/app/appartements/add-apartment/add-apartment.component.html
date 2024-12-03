@@ -1,1 +1,41 @@
-<p>add-apartment works!</p>
+<form [formGroup]="addApartment" (ngSubmit)="Add()">
+<label>apartNum</label>
+<input type="text" formControlName="apartNum"> 
+<div *ngIf="addApartment.get('apartNum')?.invalid && addApartment.get('apartNum')?.touched">apartNum invalid</div>
+<small *ngIf="addApartment.get('apartNum')?.errors?.['required']">apartNum is required.</small>
+<small *ngIf="addApartment.get('apartNum')?.errors?.['pattern']">Only numbers are allowed.</small>
+<br>
+<label>floorNum</label>
+<input type="text" formControlName="floorNum"> 
+<div *ngIf="addApartment.get('floorNum')?.invalid && addApartment.get('floorNum')?.touched" >floorNum invalid</div>
+<small *ngIf="addApartment.get('floorNum')?.errors?.['required']">floorNum is required.</small>
+<small *ngIf="addApartment.get('floorNum')?.errors?.['pattern']">Only numbers are allowed.</small>
+<br>  
+<label>surface</label>
+<input type="text" formControlName="surface"> 
+<div *ngIf="addApartment.get('surface')?.invalid && addApartment.get('surface')?.touched">surface invalid</div>
+<small *ngIf="addApartment.get('surface')?.errors?.['required']">surface is required.</small>
+<small *ngIf="addApartment.get('surface')?.errors?.['pattern']">Only numbers are allowed.</small>  
+<div>
+    Terrace :
+<label><input type="radio" formControlName="terrace" value="yes">yes</label>
+<label><input type="radio" formControlName="terrace" value="no">no</label>
+</div>    
+<label>surfaceTerrace</label>
+<input type="text" formControlName="surfaceTerrace"> 
+<div *ngIf="addApartment.get('surfaceTerrace')?.invalid && addApartment.get('surfaceTerrace')?.touched">surfaceTerrace invalid</div>
+<small *ngIf="addApartment.get('surfaceTerrace')?.errors?.['required']">surfaceTerrace is required.</small>
+<small *ngIf="addApartment.get('surfaceTerrace')?.errors?.['pattern']">Only numbers are allowed.</small>
+<br>
+<div>
+    Catergory :
+<label><input type="radio" formControlName="Catergory" value="S+1">S+1</label><br>
+<label><input type="radio" formControlName="Catergory" value="S+2">S+2</label><br>
+<label><input type="radio" formControlName="Catergory" value="S+3">S+3</label>
+</div> 
+<label>residence</label>
+<input type="text" formControlName="residence"> 
+<br>   
+<button type="submit">Add</button>
+<button type="submit">Reset</button>
+</form>

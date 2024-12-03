@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResidencesComponent } from './Residences/residences/residences.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ResidenceDetailsComponent } from './residences/residence-details/residence-details.component';
-import { AddResidenceComponent } from './residences/add-residence/add-residence.component';
+import { ResidenceDetailsComponent } from './Residences/residence-details/residence-details.component';
+import { AddResidenceComponent } from './Residences/add-residence/add-residence.component';
 import { ApartmentsComponent } from './appartements/apartments/apartments.component';
 import { ApartmentsByResidenceComponent } from './appartements/apartments-by-residence/apartments-by-residence.component';
 import { AddApartmentComponent } from './appartements/add-apartment/add-apartment.component';
@@ -34,6 +34,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [],
